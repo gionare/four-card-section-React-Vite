@@ -1,0 +1,19 @@
+main {
+  margin-top: 7.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+}
+
+@media only screen and (min-width: 90rem) {
+  main {
+    flex-direction: row;
+  }
+}
