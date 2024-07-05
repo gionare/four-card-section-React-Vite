@@ -2,7 +2,7 @@ import "../shared/container.css";
 import CalculatorImage from "/images/icon-calculator.svg";
 import { useState } from "react";
 
-export default function Calculator() {
+export default function Calculator(props) {
   const [count, setCount] = useState(10);
 
   function handleChange() {
@@ -11,8 +11,8 @@ export default function Calculator() {
 
   return (
     <div className="box blue">
-      <h2>Calculator</h2>
-      <p>Uses data from past projects to provide better delivery estimates</p>
+      <h2>{props.title}</h2>
+      <p>{props.description}</p>
       <h1>{count}</h1>
       <button onClick={handleChange}>Click</button>
       <img src={CalculatorImage} alt="calculator image" />

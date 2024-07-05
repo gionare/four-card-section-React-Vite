@@ -3,7 +3,7 @@ import KarmaImage from "/images/icon-karma.svg";
 import BulbImage from "/images/bulb.jpeg";
 import { useState } from "react";
 
-export default function Karma() {
+export default function Karma(props) {
   const [light, setLight] = useState(false);
 
   function handleChange() {
@@ -12,8 +12,8 @@ export default function Karma() {
 
   return (
     <div className="box yellow">
-      <h2>Karma</h2>
-      <p>Regularly evaluates our talent to ensure quality</p>
+      <h2>{props.title}</h2>
+      <p>{props.description}</p>
       <button onClick={handleChange}>Click</button>
       <div>
         {!light ? (
